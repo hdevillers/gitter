@@ -247,7 +247,7 @@
 
 .drawRect <- function(rects, im, color='red', int = 1){
   col.rgb = col2rgb(color)[,1]/255
-  if( class(im) == 'matrix')
+  if( 'matrix' %in% class(im) )
     im = .getColorImage(im)
   
   for(i in 1:nrow(rects)){
